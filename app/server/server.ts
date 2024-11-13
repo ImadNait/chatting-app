@@ -1,9 +1,10 @@
 import express, { NextFunction, Request, Response } from 'express';
-import { Server } from 'ws';
+import { Server } from 'socket.io';
 import { config } from 'dotenv'
 import userRouter from './routes/users'
 import { user } from './types/response';
 config();
+
 const wsPort = process.env.WS_PORT
 const PORT = process.env.PORT
 const app: express.Express = express();
