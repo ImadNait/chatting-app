@@ -5,10 +5,9 @@ import userRouter from './routes/users'
 import { user } from './types/response';
 config();
 
-const wsPort = process.env.WS_PORT
 const PORT = process.env.PORT
 const app: express.Express = express();
-console.log(wsPort);
+
 app.use('/users', userRouter)
 app.use(express.json())
 app.get('/',(req: Request, res: Response, next: NextFunction)=>{
