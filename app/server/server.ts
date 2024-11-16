@@ -4,6 +4,7 @@ import { config } from 'dotenv'
 import userRouter from './routes/users'
 import { user } from './types/response';
 config();
+const ioPORT = process.env.ioPORT;
 const io = new Server(ioPORT)
 const PORT = process.env.PORT;
 const app: express.Express = express();
