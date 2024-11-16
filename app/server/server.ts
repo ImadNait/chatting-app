@@ -8,6 +8,9 @@ const ioPORT = process.env.ioPORT;
 const io = new Server(ioPORT)
 const PORT = process.env.PORT;
 const app: express.Express = express();
+io.on("connection", ()=>{
+    console.log(socket.id);
+})
 app.use('/users', userRouter)
 app.use(express.json())
 app.get('/',(req: Request, res: Response, next: NextFunction)=>{
