@@ -12,8 +12,8 @@ export function createUser(req:Request<{}, {}, newUserDto, CreateUserQueryParams
 
     res.status(201).send({
     id:3,
-    name:"nigga",
-    email:"hehe@gmail.com"
+    name:"top",
+    email:"johndoe@gmail.com"
    })
 
 }
