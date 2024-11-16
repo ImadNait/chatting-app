@@ -9,10 +9,10 @@ export default function Chat(){
 
 
     form?.addEventListener("submit", e=>{
-        e.preventDefault()
+        e.preventDefault();
         const message = messageInp.value
         const room = roomInp.value
-        if(message==="") return displayMsg(message)
+        if(message==="") return displayMsg(message);
         messageInp.value=""
     })
 
