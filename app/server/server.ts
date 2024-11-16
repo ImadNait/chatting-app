@@ -4,10 +4,9 @@ import { config } from 'dotenv'
 import userRouter from './routes/users'
 import { user } from './types/response';
 config();
-
-const PORT = process.env.PORT
+const io = new Server(ioPORT)
+const PORT = process.env.PORT;
 const app: express.Express = express();
-
 app.use('/users', userRouter)
 app.use(express.json())
 app.get('/',(req: Request, res: Response, next: NextFunction)=>{
